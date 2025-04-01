@@ -18,7 +18,7 @@
                         <p>
                             <a href="#">{{value.categoria}}</a>
                         </p>
-                        <h3><a href="product.html">{{ value.nombre }}</a></h3>
+                        <h3><a href="product.html">{{value.nombre}}</a></h3>
                     </div><!--
     No Space
     --><div class="prod-li-prices">
@@ -59,20 +59,18 @@ No Space
 
                 <dl class="prod-li-props">
                     <dt>Marca:</dt>
-                    <dd><a href="#">{{value.marca}}</a></dd>
+                    <dd><a href="#">value.marca</a></dd>
                     <dt>Peso:</dt>
-                    <dd>{{value.peso}} kg</dd>
+                    <dd>value.peso kg</dd>
                     <dt>Dimensiones:</dt>
-                    <dd>{{value.dimension}}</dd>
+                    <dd>value.dimension</dd>
                     <dt>Сolor:</dt>
-                    <dd>{{value.color}}</dd>
+                    <dd>value.color</dd>
                 </dl>
             </div>
         </article>
         {% endfor %}
     </div>
-
-
     <div class="cart-actions">
         <div class="coupon">
             <input type="text" placeholder="Coupon code">
@@ -80,7 +78,7 @@ No Space
         </div>
         <div class="cart-collaterals">
             <a href="{% url 'web:limpiarCarrito' %}" class="checkout-button button">Limpiar Carrito</a>
-            <a href="{% url 'web:registrarPedido' %}" class="checkout-button button">Realizar Pedido</a>
+            <a href="#" class="checkout-button button">Realizar Pedido</a>
             <div class="order-total">
                 <p class="cart-totals-ttl">Total</p>
                 <p class="cart-totals-val">${{request.session.cartMontoTotal}}</p>
